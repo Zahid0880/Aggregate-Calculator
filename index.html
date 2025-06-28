@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UET Peshawar - Aggregate Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo-section">
+                <h1>UET Peshawar</h1>
+                <p>University of Engineering & Technology (Unofficial)</p>
+            </div>
+            <h2>Admission Aggregate Calculator</h2>
+        </header>
+
+        <div class="calculator-card">
+            <div class="formula-info">
+                <h3>Formula:</h3>
+                <p>(Matric marks ÷ total marks × 100) + (FSC marks ÷ total × 400) + (Test marks ÷ total × 500)</p>
+            </div>
+
+            <form id="aggregateForm">
+                <div class="input-section">
+                    <h3>Matric/O-Level Marks</h3>
+                    <div class="input-group">
+                        <div class="input-field">
+                            <label for="matricMarks">Obtained Marks:</label>
+                            <input type="number" id="matricMarks" placeholder="e.g., 850" min="0" required>
+                        </div>
+                        <div class="input-field">
+                            <label for="matricTotal">Total Marks:</label>
+                            <input type="number" id="matricTotal" placeholder="e.g., 1050" min="1" required>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="input-section">
+                    <h3>FSC/A-Level Marks</h3>
+                    <div class="input-group">
+                        <div class="input-field">
+                            <label for="fscMarks">Obtained Marks:</label>
+                            <input type="number" id="fscMarks" placeholder="e.g., 900" min="0" required>
+                        </div>
+                        <div class="input-field">
+                            <label for="fscTotal">Total Marks:</label>
+                            <input type="number" id="fscTotal" placeholder="e.g., 1100" min="1" required>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="input-section">
+                    <h3>Entry Test Marks</h3>
+                    <div class="input-group">
+                        <div class="input-field">
+                            <label for="testMarks">Expected/Obtained Marks:</label>
+                            <input type="number" id="testMarks" placeholder="e.g., 120" min="0" required>
+                        </div>
+                        <div class="input-field">
+                            <label for="testTotal">Total Marks:</label>
+                            <input type="number" id="testTotal" placeholder="e.g., 200" min="1" required>
+                        </div>
+                    </div>
+                </div>
+
+                <button type="submit" class="calculate-btn">Calculate Aggregate</button>
+            </form>
+
+            <div id="result" class="result-section" style="display: none;">
+                <h3>Your Aggregate Result</h3>
+                <div class="result-breakdown">
+                    <div class="breakdown-item">
+                        <span class="label">Matric Component:</span>
+                        <span class="value" id="matricComponent">0</span>
+                    </div>
+                    <div class="breakdown-item">
+                        <span class="label">FSC Component:</span>
+                        <span class="value" id="fscComponent">0</span>
+                    </div>
+                    <div class="breakdown-item">
+                        <span class="label">Test Component:</span>
+                        <span class="value" id="testComponent">0</span>
+                    </div>
+                    <div class="total-aggregate">
+                        <span class="label">Total Aggregate:</span>
+                        <span class="value" id="totalAggregate">0</span>
+                    </div>
+                </div>
+                <div class="merit-info">
+                    <p id="meritStatus"></p>
+                </div>
+            </div>
+
+            <div class="tips-section">
+                <h3>Tips for Better Aggregate:</h3>
+                <ul>
+                    <li>Focus on improving your entry test score as it carries the highest weightage (500 points)</li>
+                    <li>FSC marks contribute significantly (400 points) to your aggregate</li>
+                    <li>Matric marks have the lowest weightage (100 points) but still important</li>
+                    <li>Practice past papers and mock tests for entry test preparation</li>
+                </ul>
+            </div>
+        </div>
+
+        <footer>
+            <p>&copy; 2024 UET Peshawar Aggregate Calculator(Unofficial). For educational purposes only.</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
